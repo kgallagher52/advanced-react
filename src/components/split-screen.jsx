@@ -5,16 +5,16 @@ const Container = styled.div`
 `;
 
 const Panel = styled.div`
-	flex: 1; // equal width in container
+	flex: ${(p) => p.flex}; // equal width in container
 `;
 
-export const SplitScreen = ({ Left, Right }) => {
+export const SplitScreen = ({ Left, Right, leftWidth = 1, rightWidth = 1 }) => {
 	return (
 		<Container>
-			<Panel>
+			<Panel flex={leftWidth}>
 				<Left />
 			</Panel>
-			<Panel>
+			<Panel flex={rightWidth}>
 				<Right />
 			</Panel>
 		</Container>
