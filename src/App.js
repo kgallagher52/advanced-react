@@ -1,19 +1,14 @@
-import { SplitScreen } from "./components/split-screen";
-
-const LeftSideComp = ({ title }) => (
-  <h2 style={{ background: "teal" }}>{title}</h2>
-);
-
-const RightSideComp = ({ title }) => (
-  <h2 style={{ background: "green" }}>{title}</h2>
-);
+import { LargeAuthorListItem } from "./components/authors/LargeListItems";
+import { SmallAuthorListItem } from "./components/authors/SmallListItems";
+import { authors } from "./data/authors";
+import { RegularList } from "./lists/Regular";
 
 function App() {
   return (
-    <SplitScreen leftWidth={1} rightWidth={3} >
-      <LeftSideComp title={"I am Left!"} />
-      <RightSideComp title={"I am Right!"} />
-    </SplitScreen>
+    <>
+      <RegularList items={authors} sourceName={"author"} ItemComponent={SmallAuthorListItem} />
+      <RegularList items={authors} sourceName={"author"} ItemComponent={LargeAuthorListItem} />
+    </>
   );
 };
 
