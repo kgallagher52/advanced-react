@@ -2,6 +2,10 @@
 
 Learning Advanced React concepts, Design System, Design Patterns, Performance
 
+## Resources
+
+[Udemy Course](https://www.udemy.com/course/advanced-react)
+
 # Design Patterns: Layout Components
 
 ### Layout Components (context of react)
