@@ -1,4 +1,4 @@
-export const RegularList = ({ items, sourceName, ItemComponent }) => {
+export const NumberedList = ({ items, sourceName, ItemComponent }) => {
 	return (
 		<>
 			{items.map((item, i) => (

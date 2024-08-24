@@ -1,7 +1,5 @@
-import { LargeAuthorListItem } from "./components/authors/LargeListItems";
-import { SmallAuthorListItem } from "./components/authors/SmallListItems";
-import { LargeBookListItem } from "./components/books/LargeListItems";
-import { SmallBookListItem } from "./components/books/SmallListItems";
+import { LargeBookListItem, SmallBookListItem } from "./components/books";
+import { LargeAuthorListItem, SmallAuthorListItem } from "./components/authors";
 import { authors, books } from "./data";
 import { RegularList } from "./lists/Regular";
 
