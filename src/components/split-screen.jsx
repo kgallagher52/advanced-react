@@ -8,15 +8,12 @@ const Panel = styled.div`
 	flex: ${(p) => p.flex}; // equal width in container
 `;
 
-export const SplitScreen = ({ Left, Right, leftWidth = 1, rightWidth = 1 }) => {
+export const SplitScreen = ({ children, leftWidth = 1, rightWidth = 1 }) => {
+	const [Left, Right] = children;
 	return (
 		<Container>
-			<Panel flex={leftWidth}>
-				<Left />
-			</Panel>
-			<Panel flex={rightWidth}>
-				<Right />
-			</Panel>
+			<Panel flex={leftWidth}>{Left}</Panel>
+			<Panel flex={rightWidth}>{Right}</Panel>
 		</Container>
 	);
 };
