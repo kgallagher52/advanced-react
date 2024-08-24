@@ -6,14 +6,14 @@ const ModalBackground = styled.div`
 	left: 0;
 	top: 0;
 	overflow: auto;
-	background-color: #00000067;
+	background-color: #00000090;
 	width: 100%;
 	height: 100%;
 `;
 const ModalContent = styled.div`
 	margin: 15% auto;
 	padding: 24px;
-	background-color: eggshell;
+	background-color: #72ffff;
 	width: 50%;
 `;
 
