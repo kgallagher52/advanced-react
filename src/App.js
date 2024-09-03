@@ -9,7 +9,8 @@ const getData = async (url) => {
 
 /* Double arrow function creates a higher order function */
 const getDataFromLocalStorage = (key) => () => {
-  return localStorage.getItem(key);
+  const localData = localStorage.getItem(key);
+  return localData ? localData : `No data found with key: ${key}`;
 };
 
 /* simple functional component to display local storage data */
