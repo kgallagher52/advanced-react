@@ -74,3 +74,55 @@ Learning Advanced React concepts, Design System, Design Patterns, Performance
 ```
 
 ### Controlled and Uncontrolled Components Section 4
+
+- **Uncontrolled Concept Components**
+  - The Component itself manages its own internal state like a form
+
+```jsx
+const UncontrolledComponent = ({ onSubmit }) => {
+	/* State managed by the component itself */
+	const [value, setValue] = useState("");
+
+	const handleSubmit = (event) => {
+		event.preventDefault();
+		onSubmit(value);
+	};
+
+	return (
+		<form onSubmit={handleSubmit}>
+			<input
+				type="text"
+				value
+				onChange={(e) => setValue(e.target.value)}
+			/>
+			<button type="submit">Submit</button>
+		</form>
+	);
+};
+
+<>
+<UncontrolledComponent onSubmit={(data) => {...}} />
+</>
+```
+
+- **Controlled Concept Components**
+  - The Parent component is responsible for managing the state (passed state by props)
+
+```jsx
+const ControlledComponent = ({onSubmit, value, onChange} => {
+  return (
+   	<form onSubmit>
+			<input type="text" value onChange />
+			<button type="submit">Submit</button>
+		</form>
+  )
+});
+
+<>
+  <ControlledComponent
+    data={...}
+    onSubmit={() => {...}}
+    onChange={() => {...}}
+  />
+</>
+```
