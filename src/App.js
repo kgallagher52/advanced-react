@@ -1,6 +1,6 @@
 import axios from "axios";
 import { BookInfo } from "./components/info/book";
-import { DataSource } from "./components/data-source";
+import { DataSourceRenderPattern } from "./components/data-source-with-render-pattern";
 
 const getData = async (url) => {
   const res = await axios.get(url);
@@ -10,9 +10,10 @@ const getData = async (url) => {
 function App() {
   return (
     <>
-      <DataSource getData={() => getData('/books/1')} resourceName={'book'}>
-        <BookInfo />
-      </DataSource>
+      <DataSourceRenderPattern
+        getData={() => getData('/books/1')}
+        render={(resource) => <BookInfo book={resource} />}>
+      </DataSourceRenderPattern>
     </>
   );
 };
