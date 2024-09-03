@@ -1,4 +1,4 @@
-import { UncontrolledForm } from "./section4";
+import { ControlledForm, UncontrolledForm } from "./section4";
 
 // const getData = async (url) => {
 //   const res = await axios.get(url);
@@ -19,6 +19,7 @@ function App() {
   return (
     <>
       <UncontrolledForm />
+      <ControlledForm />
     </>
   );
 };

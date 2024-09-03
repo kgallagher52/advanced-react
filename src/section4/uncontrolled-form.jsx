@@ -12,6 +12,7 @@ export const UncontrolledForm = () => {
 	};
 
 	return (
+		/* State managed inside the form */
 		<form onSubmit={submitHandler}>
 			<input
 				name="name"
