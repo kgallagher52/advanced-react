@@ -7,13 +7,28 @@ const getData = async (url) => {
   return res.data;
 };
 
+/* Double arrow function creates a higher order function */
+const getDataFromLocalStorage = (key) => () => {
+  const localData = localStorage.getItem(key);
+  return localData ? localData : `No data found with key: ${key}`;
+};
+
+/* simple functional component to display local storage data */
+const Message = ({ msg }) => <h1>{msg}</h1>;
+
 function App() {
   return (
     <>
-      <DataSourceRenderPattern
+      <DataSource
         getData={() => getData('/books/1')}
-        render={(resource) => <BookInfo book={resource} />}>
-      </DataSourceRenderPattern>
+        resourceName={'book'}>
+        <BookInfo />
+      </DataSource>
+      <DataSource
+        getData={() => getDataFromLocalStorage('test')}
+        resourceName={'msg'}>
+        <Message />
+      </DataSource>
     </>
   );
 };
