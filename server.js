@@ -38,18 +38,21 @@ let users = [
 let books = [
   {
     name: "To Kill a Mockingbird",
+    id: "1",
     pages: 281,
     title: "Harper Lee",
     price: 12.99,
   },
   {
     name: "The Catcher in the Rye",
+    id: "2",
     pages: 224,
     title: "J.D. Salinger",
     price: 9.99,
   },
   {
     name: "The Little Prince",
+    id: "3",
     pages: 85,
     title: "Antoine de Saint-Exupéry",
     price: 7.99,

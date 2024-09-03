@@ -1,14 +1,16 @@
-import { UserLoader, UserInfo } from "./components/users";
+import { ResourceLoader } from "./components/resource-loader";
+import { BookInfo } from "./components/info/book";
+import { UserInfo } from "./components/users/user";
 
 function App() {
   return (
     <>
-      <UserLoader userId={"3"}>
+      <ResourceLoader resourceUrl={'/users/2'} resourceName={'user'}>
         <UserInfo />
-      </UserLoader>
-      <UserLoader userId={"1"}>
-        <UserInfo />
-      </UserLoader>
+      </ResourceLoader>
+      <ResourceLoader resourceUrl={'/books/3'} resourceName={'book'}>
+        <BookInfo />
+      </ResourceLoader>
     </>
   );
 };
