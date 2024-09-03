@@ -55,3 +55,20 @@ Learning Advanced React concepts, Design System, Design Patterns, Performance
   }
 
   ```
+
+- React.isValidElement(child) -> this is verifying that the component is valid.
+
+**Passing Additional props into child component using cloneElement()**
+
+```jsx
+<>
+	{React.Children.map((children, child) => {
+		// Validation
+		if (React.isValidElement(child)) {
+			/* Clone the element so we can pass additional props to it */
+			return React.cloneElement(child, { user });
+		}
+		return child;
+	})}
+</>
+```
