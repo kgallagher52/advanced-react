@@ -14,18 +14,21 @@ let currentUser = {
 let users = [
   {
     name: "Sarah Waters",
+    id: "1",
     age: 55,
     country: "United Kingdom",
     books: ["Fingersmith", "The Night Watch"],
   },
   {
     name: "Haruki Murakami",
+    id: "2",
     age: 71,
     country: "Japan",
     books: ["Norwegian Wood", "Kafka on the Shore"],
   },
   {
     name: "Chimamanda Ngozi Adichie",
+    id: "3",
     age: 43,
     country: "Nigeria",
     books: ["Half of a Yellow Sun", "Americanah"],
