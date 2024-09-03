@@ -1,11 +1,14 @@
-import { CurrentUserLoader, UserInfo } from "./components/users";
+import { UserLoader, UserInfo } from "./components/users";
 
 function App() {
   return (
     <>
-      <CurrentUserLoader>
+      <UserLoader userId={"3"}>
         <UserInfo />
-      </CurrentUserLoader>
+      </UserLoader>
+      <UserLoader userId={"1"}>
+        <UserInfo />
+      </UserLoader>
     </>
   );
 };
