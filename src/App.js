@@ -1,14 +1,19 @@
-import { books } from "./data";
-import { Modal } from "./components/Modal";
-import { LargeBookListItem } from "./components/books";
+import axios from "axios";
+import { BookInfo } from "./components/info/book";
+import { DataSourceRenderPattern } from "./components/data-source-with-render-pattern";
+
+const getData = async (url) => {
+  const res = await axios.get(url);
+  return res.data;
+};
 
 function App() {
   return (
     <>
-      <Modal>
-        {/* Demonstrating how easy it was to use this component over again with Modal because of this pattern */}
-        <LargeBookListItem book={books[0]} />
-      </Modal>
+      <DataSourceRenderPattern
+        getData={() => getData('/books/1')}
+        render={(resource) => <BookInfo book={resource} />}>
+      </DataSourceRenderPattern>
     </>
   );
 };
