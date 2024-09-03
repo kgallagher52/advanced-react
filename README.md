@@ -8,7 +8,7 @@ Learning Advanced React concepts, Design System, Design Patterns, Performance
 
 # Design Patterns
 
-### Layout Components
+### Layout Components Section 2
 
 - They focus on organizing other components within a web page.
   - Layout Components Patterns
@@ -17,7 +17,7 @@ Learning Advanced React concepts, Design System, Design Patterns, Performance
     - Modals
 - The core content components of our pages, should be unaware and unconcerned about their precise location within the page structure. Meaning children of a layout component shouldn't care about there position on the page just how they look.
 
-### Container Components
+### Container Components Section 3
 
 - They handle data loading & data management on behalf of their child components.
 - Components are unaware of the source or management of their data meaning the children shouldn't know where the data is coming from.
@@ -72,3 +72,5 @@ Learning Advanced React concepts, Design System, Design Patterns, Performance
 	})}
 </>
 ```
+
+### Controlled and Uncontrolled Components Section 4
