@@ -1,3 +1,5 @@
+/* little more generic then current-user-loader */
+
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
